@@ -9,5 +9,6 @@ COPY . .
 
 RUN dep ensure && \
     make build
-    
-CMD ./build/bin/http-sniffer
+
+RUN cp ./build/bin/http-sniffer /usr/local/bin/http-sniffer
+CMD http-sniffer

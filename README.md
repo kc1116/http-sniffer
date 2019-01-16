@@ -27,13 +27,21 @@ run [flags]
   -w, --web                     view output in web UI
 ```
 
-Example running and parsing the test files included in this project
+### Running Locally
 ```linux
 $ go run cmd/main.go run -f ./test_files/access_log.log 
 ```
 
 Sample ouput
 <img src="http://i66.tinypic.com/jac094.png" border="0">
+
+### Running with Docker
+
+Assuming you are in the root of the project run these commands. Make sure to add your arguments to the CLI in the entrypoint override.
+```linux
+$ make docker-image
+$ docker run --name httpsniffer --entrypoint "http-sniffer -f /path/to/logs "   http-sniffer:latest
+```
 
 Please submit here:
 https://app.greenhouse.io/tests/4c4cee4a387e4510e421b3585d7523b8
