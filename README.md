@@ -42,6 +42,3 @@ Assuming you are in the root of the project run these commands. Make sure to add
 $ make docker-image
 $ docker run --name httpsniffer --entrypoint "http-sniffer -f /path/to/logs "   http-sniffer:latest
 ```
-
-Please submit here:
-https://app.greenhouse.io/tests/4c4cee4a387e4510e421b3585d7523b8
